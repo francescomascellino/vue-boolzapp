@@ -156,13 +156,13 @@ body {
 
 .vz-sentMessage {
     background-color: var(--bz-app-chat-received);
-    align-self: flex-end !important;
+    margin-left: auto !important;
 
 }
 
 .vz-receivedMessage {
     background-color: var(--bz-app-white);
-    align-self: flex-start !important;
+    margin-right: auto !important;
 }
 
 .vz-chatDate {
