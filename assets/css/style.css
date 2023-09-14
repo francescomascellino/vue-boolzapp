@@ -1,13 +1,13 @@
 .mainContainer {
-    min-height: 90vh;
+    max-height: 90vh;
     border: 1px solid red;
 }
 
 /* [class*="col-"]  */
 .col-3,
 .col-9 {
-    border: 1px solid blue;
-    height: 100%;
+    /* border: 1px solid blue; */
+    /* height: 100%; */
 }
 
 .avatarPic {
@@ -16,9 +16,14 @@
     border-radius: 50%;
 }
 
-.contactListCont {
+.contactsListCont {
     border: 1px solid orange;
-    height: 100%;
-    overflow-x: hidden;
-    overflow: scroll;
+    min-height: calc(90vh - 64px);
+    overflow-y: scroll;
+
+}
+
+.contactTab {
+    border: 1px solid greenyellow;
+    background-color: aliceblue;
 }
