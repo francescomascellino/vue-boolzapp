@@ -10,20 +10,33 @@
     /* height: 100%; */
 }
 
-.avatarPic {
+.vz-avatarPic {
     width: 3rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
 
-.contactsListCont {
+.vz-contactsListCont {
     border: 1px solid orange;
     min-height: calc(90vh - 64px);
     overflow-y: scroll;
 
 }
 
-.contactTab {
+.vz-contactTab {
     border: 1px solid greenyellow;
     background-color: aliceblue;
+}
+
+
+.vz-btnSearch {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 0;
+}
+
+.vz-btnSearchBar {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 0;
 }

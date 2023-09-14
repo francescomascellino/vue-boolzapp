@@ -28,7 +28,7 @@
 
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col mainContainer my-5 d-flex">
+                    <div class="col vz-mainContainer my-5 d-flex">
 
                         <div class="col-4">
 
@@ -38,10 +38,10 @@
                                 <div class="container-fluid">
 
                                     <!-- USER AVATAR -->
-                                    <div class="userProfileContainer">
+                                    <div class="vz-userProfileContainer">
                                         <a class="navbar-brand" href>
 
-                                            <img class="avatarPic"
+                                            <img class="vz-avatarPic"
                                                 src="./assets/img/avatar_io.jpg"
                                                 alt="My Logo">
 
@@ -80,9 +80,28 @@
 
                             </nav>
 
-                            <div class="contactsListCont">
+                            <div class="vz-contactsListCont">
 
-                                <div class="contactTab">
+                                <!-- SEARCHBAR -->
+                                <form
+                                    class="d-flex input-group bg-body-secondary p-2"
+                                    role="search">
+
+                                    <span
+                                        class="input-group-text btn vz-btnSearch"
+                                        id="searchbar">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+
+                                    <input type="search"
+                                        class="form-control border-start-0 shadow-none vz-btnSearchBar"
+                                        placeholder="Cerca o inizia una nuova chat"
+                                        aria-label="Search"
+                                        aria-describedby="searchbar">
+
+                                </form>
+
+                                <div class="vz-contactTab">
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Animi quam vitae,
                                 </div>
