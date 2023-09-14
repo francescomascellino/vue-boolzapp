@@ -13,6 +13,10 @@
 
 /* #region GLOBAL RULES */
 
+body {
+    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(219, 219, 210, 1) 15%);
+}
+
 .vz-mainContainer {
     /* max-height: 90vh; */
     padding: 0;
