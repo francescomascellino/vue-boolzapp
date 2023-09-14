@@ -104,7 +104,7 @@ body {
 /* #region CONTACTS PANEL */
 
 .vz-contactsListCont {
-    min-height: calc(90vh - 175px);
+    height: calc(90vh - 175px);
     overflow-y: scroll;
     background-color: var(--bz-app-white);
 }
@@ -148,7 +148,7 @@ body {
 }
 
 .vz-chat {
-    min-height: calc(90vh - 126px);
+    height: calc(90vh - 126px);
     overflow-y: scroll;
 }
 
