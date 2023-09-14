@@ -185,6 +185,10 @@ createApp({
 
         getAvatar(activeContact) {
             return this.contacts[activeContact].avatar
+        },
+
+        getName(activeContact) {
+            return this.contacts[activeContact].name
         }
 
     }

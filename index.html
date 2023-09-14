@@ -188,7 +188,7 @@
 
                                             <img class="vz-avatarPic"
                                                 :src="getAvatar(activeContact)"
-                                                alt>
+                                                :alt="getName(activeContact)">
 
                                         </a>
 
@@ -335,22 +335,23 @@
                                 </div>
                             </div>
 
-                            <!-- PLACEHOLDER -->
+                            <!-- SEND MESSAGE BAR -->
                             <form
-                                class="d-flex input-group bg-black p-2"
-                                role="search">
+                                class="d-flex p-2 vz-bgAppLight">
 
                                 <span
-                                    class="input-group-text btn vz-btnSearch vz-bgAppWhite"
-                                    id="searchbar">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    class="btn bg-transparent border-0">
+                                    <i class="fa-regular fa-face-smile"></i>
                                 </span>
 
-                                <input type="search"
-                                    class="form-control border-start-0 shadow-none vz-btnSearchBar vz-bgAppWhite"
-                                    placeholder="PLACEHOLDER"
-                                    aria-label="Search"
-                                    aria-describedby="searchbar">
+                                <input type="text"
+                                    class="flex-grow-1 vz-messageInput vz-bgAppWhite"
+                                    placeholder="Scrivi un messaggio">
+
+                                <button
+                                    class="btn bg-transparent border-0">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
 
                             </form>
                         </div>

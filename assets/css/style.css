@@ -15,7 +15,6 @@
 
 .vz-mainContainer {
     /* max-height: 90vh; */
-    border: 1px solid lightgray;
     padding: 0;
 }
 
@@ -35,7 +34,7 @@
     background-color: var(--bz-app-focus);
 }
 
-/* #enderegion GLOBAL RULES */
+/* #endregion GLOBAL RULES */
 
 /* SIDEBAR */
 
@@ -99,12 +98,14 @@
 /* #region CONTACTS PANEL */
 
 .vz-contactsListCont {
-    max-height: calc(90vh - 175px);
+    min-height: calc(90vh - 175px);
     overflow-y: scroll;
     background-color: var(--bz-app-white);
 }
 
-.vz-contactTab {}
+.vz-contactTab {
+    cursor: pointer;
+}
 
 .vz-contactName {
     font-size: 1rem;
@@ -141,8 +142,18 @@
 }
 
 .vz-chat {
-    max-height: calc(90vh - 130px);
+    max-height: calc(90vh - 126px);
     overflow-y: scroll;
 }
 
 /* #enderegion CHAT */
+
+/* #region SEND MESSAGE BAR */
+
+input.vz-messageInput {
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem
+}
+
+/* #endregion SEND MESSAGE BAR */
