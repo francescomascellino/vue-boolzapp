@@ -103,9 +103,21 @@
     background-color: var(--bz-app-white);
 }
 
-.vz-contactTab {
-    /* border: 1px solid greenyellow; */
-    background-color: aliceblue;
+.vz-contactTab {}
+
+.vz-contactName {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.vz-timeonline,
+.vz-lastMessage {
+    font-size: 0.7rem;
+    color: var(--bz-app-principal);
+}
+
+.vz-contactActive {
+    background-color: var(--bz-app-light);
 }
 
 /* #endregion CONTACTS PANEL */
