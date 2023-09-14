@@ -32,84 +32,114 @@
 
                         <div class="col-4">
 
-                            <!-- NAVBAR -->
-                            <nav class="navbar navbar-expand bg-body-secondary">
+                            <!-- SIDEBAR -->
+                            <div class="vz-sidebar">
+                                <!-- NAVBAR -->
+                                <nav class="navbar navbar-expand vz-bgAppLight">
 
-                                <div class="container-fluid">
+                                    <div class="container-fluid">
 
-                                    <!-- USER AVATAR -->
-                                    <div class="vz-userProfileContainer">
-                                        <a class="navbar-brand" href>
+                                        <!-- USER AVATAR -->
+                                        <div class="vz-userProfileContainer">
+                                            <a class="navbar-brand" href>
 
-                                            <img class="vz-avatarPic"
-                                                src="./assets/img/avatar_io.jpg"
-                                                alt="My Logo">
+                                                <img class="vz-avatarPic"
+                                                    src="./assets/img/avatar_io.jpg"
+                                                    alt="My Logo">
 
-                                        </a>
-                                        <span
-                                            class="d-lg-inline-block d-sm-none">User
-                                            Name</span>
+                                            </a>
+                                            <span
+                                                class="d-lg-inline-block d-sm-none">User
+                                                Name</span>
+                                        </div>
+
+                                        <!-- NAV LINKS -->
+                                        <ul class="navbar-nav ms-auto">
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">
+                                                    <i
+                                                        class="fa-solid fa-circle-notch"></i>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">
+                                                    <i
+                                                        class="fa-solid fa-message"></i>
+                                                </a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">
+                                                    <i
+                                                        class="fa-solid fa-ellipsis-vertical"></i>
+                                                </a>
+                                            </li>
+
+                                        </ul>
+
                                     </div>
 
-                                    <!-- NAV LINKS -->
-                                    <ul class="navbar-nav ms-auto">
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                <i
-                                                    class="fa-solid fa-circle-notch"></i>
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                <i class="fa-solid fa-message"></i>
-                                            </a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">
-                                                <i
-                                                    class="fa-solid fa-ellipsis-vertical"></i>
-                                            </a>
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-
-                            </nav>
-
-                            <div class="vz-contactsListCont">
+                                </nav>
 
                                 <!-- SEARCHBAR -->
                                 <form
-                                    class="d-flex input-group bg-body-secondary p-2"
+                                    class="d-flex input-group vz-bgAppLight p-2"
                                     role="search">
 
                                     <span
-                                        class="input-group-text btn vz-btnSearch"
+                                        class="input-group-text btn vz-btnSearch vz-bgAppWhite"
                                         id="searchbar">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </span>
 
                                     <input type="search"
-                                        class="form-control border-start-0 shadow-none vz-btnSearchBar"
+                                        class="form-control border-start-0 shadow-none vz-btnSearchBar vz-bgAppWhite"
                                         placeholder="Cerca o inizia una nuova chat"
                                         aria-label="Search"
                                         aria-describedby="searchbar">
 
                                 </form>
 
-                                <div class="vz-contactTab">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Animi quam vitae,
+                                <div
+                                    class="d-flex align-items-center p-2 vz-notificationAlert vz-appFocus">
+
+                                    <div class="me-2 vz-bell">
+                                        <i class="fa fa-bell-slash"
+                                            aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="vz-notMess d-flex flex-column">
+                                        <span
+                                            class="d-lg-inline-block d-sm-none">Ricevi
+                                            notifiche di nuovi messaggi</span>
+                                        <a class="vz-actDeskNot" href>Attive
+                                            notifiche desktop</a>
+                                    </div>
+
+                                </div>
+                                <!-- CONTACTS LIST -->
+                                <div class="vz-contactsListCont">
+
+                                    <div class="vz-contactTab">
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Animi quam vitae,
+                                    </div>
+
                                 </div>
 
                             </div>
 
                         </div>
-                        <div class="col flex-grow-1"></div>
+
+                        <div class="col flex-grow-1">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Omnis, voluptas accusantium dicta iure
+                            reprehenderit nobis sint ratione praesentium
+                            adipisci dolore pariatur ipsum quia eligendi.
+                            Incidunt ea sit dolorum minima cum!
+                        </div>
 
                     </div>
                 </div>

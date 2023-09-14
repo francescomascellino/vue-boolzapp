@@ -1,3 +1,18 @@
+/* #region VARIABLES */
+
+:root {
+    --bz-app-principal: #ababab;
+    --bz-app-header: #009688;
+    --bz-app-success: #D5F9BA;
+    --bz-app-light: #E9EBEB;
+    --bz-app-white: #FFFFFF;
+    --bz-app-focus: #8EDAFC;
+}
+
+/* #endregion VARIABLES */
+
+/* #region GLOBAL RULES */
+
 .mainContainer {
     max-height: 90vh;
     border: 1px solid red;
@@ -10,16 +25,78 @@
     /* height: 100%; */
 }
 
+.vz-bgAppLight {
+    background-color: var(--bz-app-light);
+}
+
+.vz-bgAppWhite {
+    background-color: var(--bz-app-white);
+}
+
+.vz-appFocus {
+    background-color: var(--bz-app-focus);
+}
+
+/* #enderegion GLOBAL RULES */
+
+/* SIDEBAR */
+
+/* #region USER NAVBAR */
+
+.nav-item a {
+    color: var(--bz-app-principal) !important;
+}
+
 .vz-avatarPic {
     width: 3rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
 
-.vz-contactsListCont {
+.vz-bell {
+    color: var(--bz-app-focus);
+    background-color: var(--bz-app-white);
+    width: 2.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+
+.vz-notMess {
+    font-size: 0.8rem;
+}
+
+.vz-actDeskNot {
+    font-size: 0.7rem;
+}
+
+/* #region SEARCHBAR */
+
+.vz-sidebar {
     border: 1px solid orange;
-    min-height: calc(90vh - 64px);
+}
+
+.vz-btnSearch {
+    border: 1px solid lightgray;
+    border-radius: 0;
+    color: var(--bz-app-principal) !important;
+}
+
+.vz-btnSearchBar {
+    border: 1px solid lightgray;
+    border-radius: 0;
+    font-size: 0.8rem;
+}
+
+/* #region CONTACT PANEL */
+
+.vz-contactsListCont {
+    min-height: calc(90vh - 118px);
     overflow-y: scroll;
+    border: 1px solid goldenrod;
 
 }
 
@@ -28,15 +105,4 @@
     background-color: aliceblue;
 }
 
-
-.vz-btnSearch {
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 0;
-}
-
-.vz-btnSearchBar {
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 0;
-}
+/* #endregion CONTACT PANEL */
