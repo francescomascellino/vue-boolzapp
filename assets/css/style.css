@@ -1,0 +1,24 @@
+.mainContainer {
+    min-height: 90vh;
+    border: 1px solid red;
+}
+
+/* [class*="col-"]  */
+.col-3,
+.col-9 {
+    border: 1px solid blue;
+    height: 100%;
+}
+
+.avatarPic {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.contactListCont {
+    border: 1px solid orange;
+    height: 100%;
+    overflow-x: hidden;
+    overflow: scroll;
+}
