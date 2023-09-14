@@ -126,7 +126,9 @@
 
                                     <div
                                         class="p-2 vz-contactTab"
-                                        v-for="contact in contacts">
+                                        v-for="(contact, index) in contacts"
+                                        key="index"
+                                        :class="index == activeContact ? 'vz-contactActive' : ''">
 
                                         <div
                                             class="vz-profileContainer d-flex">
