@@ -189,7 +189,7 @@ createApp({
 
         getName(activeContact) {
             return this.contacts[activeContact].name
-        }
+        },
 
     }
 
