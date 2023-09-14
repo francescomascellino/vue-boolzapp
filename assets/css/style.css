@@ -86,10 +86,11 @@
 .vz-btnSearch {
     border: 1px solid lightgray;
     color: var(--bz-app-principal) !important;
+    cursor: pointer;
 }
 
 .vz-btnSearchBar {
-    border: 1px solid lightgray;
+    border: 1px solid lightgray !important;
     font-size: 0.8rem;
 }
 
