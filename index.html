@@ -128,7 +128,8 @@
                                         class="p-2 vz-contactTab"
                                         v-for="(contact, index) in contacts"
                                         key="index"
-                                        :class="index == activeContact ? 'vz-contactActive' : ''">
+                                        :class="index == activeContact ? 'vz-contactActive' : ''"
+                                        @click="activeContact = index">
 
                                         <div
                                             class="vz-profileContainer d-flex">
@@ -186,8 +187,8 @@
                                         <a class="navbar-brand" href="#">
 
                                             <img class="vz-avatarPic"
-                                                src="./img/avatar_1.jpg"
-                                                alt="CONTACT NAME">
+                                                :src="getAvatar(activeContact)"
+                                                alt>
 
                                         </a>
 
@@ -195,8 +196,7 @@
                                         <div class="vz-contactStatus">
 
                                             <div>
-                                                <span>Contact
-                                                    Name</span>
+                                                <span>{{contacts[activeContact].name}}</span>
                                             </div>
 
                                             <div>

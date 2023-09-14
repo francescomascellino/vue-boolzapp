@@ -183,6 +183,10 @@ createApp({
 
     methods: {
 
+        getAvatar(activeContact) {
+            return this.contacts[activeContact].avatar
+        }
+
     }
 
 }).mount('#app')
