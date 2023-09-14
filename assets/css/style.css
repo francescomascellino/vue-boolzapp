@@ -13,9 +13,10 @@
 
 /* #region GLOBAL RULES */
 
-.mainContainer {
-    max-height: 90vh;
-    border: 1px solid red;
+.vz-mainContainer {
+    /* max-height: 90vh; */
+    border: 1px solid lightgray;
+    padding: 0;
 }
 
 .vz-profileContainer {
@@ -79,18 +80,16 @@
 /* #region SEARCHBAR */
 
 .vz-sidebar {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 }
 
 .vz-btnSearch {
     border: 1px solid lightgray;
-    border-radius: 0;
     color: var(--bz-app-principal) !important;
 }
 
 .vz-btnSearchBar {
     border: 1px solid lightgray;
-    border-radius: 0;
     font-size: 0.8rem;
 }
 
@@ -99,23 +98,38 @@
 /* #region CONTACTS PANEL */
 
 .vz-contactsListCont {
-    min-height: calc(90vh - 174px);
+    max-height: calc(90vh - 175px);
     overflow-y: scroll;
-    border: 1px solid goldenrod;
-
+    background-color: var(--bz-app-white);
 }
 
 .vz-contactTab {
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
     background-color: aliceblue;
 }
 
 /* #endregion CONTACTS PANEL */
 
-/* #region CONTACT NAVBAR */
+/* #region ACTIVE CONTACT NAVBAR */
+
+.vz-ActContactNavbar {
+    border-left: 1px solid lightgray;
+}
 
 .vz-lastOnline {
     font-size: 0.7rem;
 }
 
-/* #endregion CONTACT NAVBAR */
+/* #endregion ACTIVE CONTACT NAVBAR */
+
+/* #region CHAT */
+.vz-chatContainer {
+    background-image: url("..//img/mine.jpg");
+}
+
+.vz-chat {
+    max-height: calc(90vh - 130px);
+    overflow-y: scroll;
+}
+
+/* #enderegion CHAT */
