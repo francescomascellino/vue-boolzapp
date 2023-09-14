@@ -45,13 +45,12 @@
                                             <a class="navbar-brand" href="#">
 
                                                 <img class="vz-avatarPic"
-                                                    src="./assets/img/avatar_io.jpg"
-                                                    alt="MY NAME">
+                                                    src="./img/avatar_io.jpg"
+                                                    alt="User">
 
                                             </a>
                                             <span
-                                                class="d-lg-inline-block d-sm-none">User
-                                                Name</span>
+                                                class="d-lg-inline-block d-sm-none">User</span>
                                         </div>
 
                                         <!-- NAV LINKS -->
@@ -109,7 +108,7 @@
                                     role="search">
 
                                     <span
-                                        class="input-group-text btn vz-btnSearch vz-bgAppWhite"
+                                        class="input-group-text vz-btnSearch vz-bgAppWhite"
                                         id="searchbar">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </span>
@@ -126,7 +125,8 @@
                                 <div class="vz-contactsListCont">
 
                                     <div
-                                        class="p-2 vz-contactTab vz-contactActive">
+                                        class="p-2 vz-contactTab"
+                                        v-for="contact in contacts">
 
                                         <div
                                             class="vz-profileContainer d-flex">
@@ -135,8 +135,8 @@
                                             <div class="me-2">
 
                                                 <img class="vz-avatarPic"
-                                                    src="./assets/img/avatar_1.jpg"
-                                                    alt="CONTACT NAME">
+                                                    :src="contact.avatar"
+                                                    :alt="contact.name">
 
                                             </div>
 
@@ -146,8 +146,7 @@
                                                 class="d-flex flex-column flex-grow-1 align-items-start vz-status">
 
                                                 <div class="mb-1 vz-contactName">
-                                                    <span>Contact
-                                                        Name</span>
+                                                    <span>{{contact.name}}</span>
                                                 </div>
 
                                                 <div class="vz-lastMessage">
@@ -185,7 +184,7 @@
                                         <a class="navbar-brand" href="#">
 
                                             <img class="vz-avatarPic"
-                                                src="./assets/img/avatar_1.jpg"
+                                                src="./img/avatar_1.jpg"
                                                 alt="CONTACT NAME">
 
                                         </a>
