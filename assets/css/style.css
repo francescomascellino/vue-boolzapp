@@ -18,11 +18,8 @@
     border: 1px solid red;
 }
 
-/* [class*="col-"]  */
-.col-3,
-.col-9 {
-    /* border: 1px solid blue; */
-    /* height: 100%; */
+.vz-profileContainer {
+    font-size: 0.8rem;
 }
 
 .vz-bgAppLight {
@@ -53,6 +50,10 @@
     border-radius: 50%;
 }
 
+/* #endregion USER NAVBAR */
+
+/* #region DESKTOP NOTIFICATION ALERT */
+
 .vz-bell {
     color: var(--bz-app-focus);
     background-color: var(--bz-app-white);
@@ -73,6 +74,8 @@
     font-size: 0.7rem;
 }
 
+/* #endregion DESKTOP NOTIFICAYION ALERT */
+
 /* #region SEARCHBAR */
 
 .vz-sidebar {
@@ -91,10 +94,12 @@
     font-size: 0.8rem;
 }
 
-/* #region CONTACT PANEL */
+/* #endregion SEARCHBAR */
+
+/* #region CONTACTS PANEL */
 
 .vz-contactsListCont {
-    min-height: calc(90vh - 118px);
+    min-height: calc(90vh - 174px);
     overflow-y: scroll;
     border: 1px solid goldenrod;
 
@@ -105,4 +110,12 @@
     background-color: aliceblue;
 }
 
-/* #endregion CONTACT PANEL */
+/* #endregion CONTACTS PANEL */
+
+/* #region CONTACT NAVBAR */
+
+.vz-lastOnline {
+    font-size: 0.7rem;
+}
+
+/* #endregion CONTACT NAVBAR */

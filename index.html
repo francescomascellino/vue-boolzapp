@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vue Hello</title>
+        <title>Boolzapp</title>
 
         <!-- BOOTSTRAP 5.3.1 CSS CDN -->
         <link
@@ -34,18 +34,19 @@
 
                             <!-- SIDEBAR -->
                             <div class="vz-sidebar">
-                                <!-- NAVBAR -->
+                                <!-- USER NAVBAR -->
                                 <nav class="navbar navbar-expand vz-bgAppLight">
 
                                     <div class="container-fluid">
 
                                         <!-- USER AVATAR -->
-                                        <div class="vz-userProfileContainer">
+                                        <div
+                                            class="vz-profileContainer d-flex align-items-center">
                                             <a class="navbar-brand" href>
 
                                                 <img class="vz-avatarPic"
                                                     src="./assets/img/avatar_io.jpg"
-                                                    alt="My Logo">
+                                                    alt="MY NAME">
 
                                             </a>
                                             <span
@@ -83,6 +84,25 @@
 
                                 </nav>
 
+                                <!-- ACTIVATE DESKTOP NOTIFICATION ALERT -->
+                                <div
+                                    class="d-flex align-items-center p-2 vz-notificationAlert vz-appFocus">
+
+                                    <div class="me-2 vz-bell">
+                                        <i class="fa fa-bell-slash"
+                                            aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="vz-notMess d-flex flex-column">
+                                        <span
+                                            class="d-lg-inline-block d-sm-none">Ricevi
+                                            notifiche di nuovi messaggi</span>
+                                        <a class="vz-actDeskNot" href>Attive
+                                            notifiche desktop</a>
+                                    </div>
+
+                                </div>
+
                                 <!-- SEARCHBAR -->
                                 <form
                                     class="d-flex input-group vz-bgAppLight p-2"
@@ -102,23 +122,6 @@
 
                                 </form>
 
-                                <div
-                                    class="d-flex align-items-center p-2 vz-notificationAlert vz-appFocus">
-
-                                    <div class="me-2 vz-bell">
-                                        <i class="fa fa-bell-slash"
-                                            aria-hidden="true"></i>
-                                    </div>
-
-                                    <div class="vz-notMess d-flex flex-column">
-                                        <span
-                                            class="d-lg-inline-block d-sm-none">Ricevi
-                                            notifiche di nuovi messaggi</span>
-                                        <a class="vz-actDeskNot" href>Attive
-                                            notifiche desktop</a>
-                                    </div>
-
-                                </div>
                                 <!-- CONTACTS LIST -->
                                 <div class="vz-contactsListCont">
 
@@ -134,11 +137,68 @@
                         </div>
 
                         <div class="col flex-grow-1">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Omnis, voluptas accusantium dicta iure
-                            reprehenderit nobis sint ratione praesentium
-                            adipisci dolore pariatur ipsum quia eligendi.
-                            Incidunt ea sit dolorum minima cum!
+                            <!-- ACTIVE CONTACT NAVBAR -->
+                            <nav class="navbar navbar-expand vz-bgAppLight">
+
+                                <div class="container-fluid">
+
+                                    <!-- USER AVATAR -->
+                                    <div
+                                        class="vz-profileContainer d-flex align-items-center">
+                                        <a class="navbar-brand" href>
+
+                                            <img class="vz-avatarPic"
+                                                src="./assets/img/avatar_1.jpg"
+                                                alt="CONTACT NAME">
+
+                                        </a>
+                                        <!-- d-lg-inline-block d-sm-none -->
+
+                                        <div class="vz-contactStatus">
+
+                                            <div>
+                                                <span>Contact
+                                                    Name</span>
+                                            </div>
+
+                                            <div>
+                                                <span class="vz-lastOnline">Ultimo
+                                                    accesso
+                                                    oggi alle 12.00</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- NAV LINKS -->
+                                    <ul class="navbar-nav ms-auto">
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i class="fa fa-search"
+                                                    aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i class="fa-solid fa-paperclip"></i>
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i
+                                                    class="fa-solid fa-ellipsis-vertical"></i>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </nav>
                         </div>
 
                     </div>
