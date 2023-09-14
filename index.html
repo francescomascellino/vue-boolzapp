@@ -27,7 +27,9 @@
         <div id="app">
 
             <div class="container">
+
                 <div class="row justify-content-center">
+
                     <div class="col vz-mainContainer my-5 d-flex">
 
                         <div class="col-4">
@@ -42,6 +44,7 @@
                                         <!-- USER AVATAR -->
                                         <div
                                             class="vz-profileContainer d-flex align-items-center">
+
                                             <a class="navbar-brand" href="#">
 
                                                 <img class="vz-avatarPic"
@@ -49,8 +52,10 @@
                                                     alt="User">
 
                                             </a>
+
                                             <span
                                                 class="d-lg-inline-block d-sm-none">User</span>
+
                                         </div>
 
                                         <!-- NAV LINKS -->
@@ -93,11 +98,14 @@
                                     </div>
 
                                     <div class="vz-notMess d-flex flex-column">
+
                                         <span
                                             class="d-lg-inline-block d-sm-none">Ricevi
                                             notifiche di nuovi messaggi</span>
+
                                         <a class="vz-actDeskNot" href>Attiva
                                             notifiche desktop</a>
+
                                     </div>
 
                                 </div>
@@ -124,6 +132,7 @@
                                 <!-- CONTACTS LIST -->
                                 <div class="vz-contactsListCont">
 
+                                    <!-- CONTACT TAB -->
                                     <div
                                         class="p-2 vz-contactTab"
                                         v-for="(contact, index) in contacts"
@@ -144,7 +153,7 @@
                                             </div>
 
                                             <!-- NAME AND LAST MESSAGE -->
-                                            <!-- d-lg-inline-block d-sm-none -->
+                                            <!-- d-lg-inline-block d-xs-none -->
                                             <div
                                                 class="d-flex flex-column flex-grow-1 align-items-start vz-status">
 
@@ -153,16 +162,20 @@
                                                 </div>
 
                                                 <div class="vz-lastMessage">
+
                                                     <!-- SICURAMENTE DIVERRA' DINAMICO -->
                                                     <span>Ultimo
                                                         messaggio inviato</span>
+
                                                 </div>
 
                                             </div>
 
                                             <!-- TIME ONLINE -->
                                             <div class="vz-timeonline">
+
                                                 <span>12.00</span>
+
                                             </div>
 
                                         </div>
@@ -175,6 +188,7 @@
                         </div>
 
                         <div class="col flex-grow-1">
+
                             <!-- ACTIVE CONTACT NAVBAR -->
                             <nav
                                 class="navbar navbar-expand vz-ActContactNavbar vz-bgAppLight">
@@ -184,6 +198,7 @@
                                     <!-- CONTACT AVATAR -->
                                     <div
                                         class="vz-profileContainer d-flex align-items-center">
+
                                         <a class="navbar-brand" href="#">
 
                                             <img class="vz-avatarPic"
@@ -205,6 +220,7 @@
                                                 <span class="vz-lastOnline">Ultimo
                                                     accesso
                                                     oggi alle 12.00</span>
+
                                             </div>
 
                                         </div>
@@ -240,34 +256,34 @@
 
                             </nav>
 
-                            <div class="vz-chatContainer
-                            ">
+                            <!-- CHAT CONTAINER -->
+                            <div class="vz-chatContainer">
+
                                 <div class="p-5 d-flex flex-column vz-chat">
 
+                                    <!-- MESSAGE RENDER WRAPPER -->
                                     <div class="vz-messages d-flex"
                                         v-for="(chat, key, index) in contacts[activeContact].messages"
                                         :key="activeContact">
 
+                                        <!-- MESSAGE BUBBLE -->
                                         <div
                                             class="mb-3 border rounded-3 col-5"
                                             :class="chat.status === 'sent' ? 'vz-sentMessage' : 'vz-receivedMessage'">
+
                                             <div class="mt-3 mx-3">{{chat.message}}</div>
+
                                             <div class="d-flex">
+
                                                 <span
                                                     class="ms-auto me-2 mb-1 vz-chatDate">{{chat.date}}</span>
+
                                             </div>
 
                                         </div>
 
                                     </div>
 
-                                    <!--                                     <div
-                                        class="p-3 mb-3 border rounded-3 align-self-end vz-sentMessage">Ricordati
-                                        di stendere i panni</div>
-
-                                    <div
-                                        class="p-3 mb-3 border rounded-3 align-self-baseline vz-receivedMessage">Tutto
-                                        fatto!</div> -->
                                 </div>
                             </div>
 
@@ -294,7 +310,9 @@
                         </div>
 
                     </div>
+
                 </div>
+
             </div>
 
         </div>
