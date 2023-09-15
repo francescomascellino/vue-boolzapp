@@ -281,9 +281,36 @@
                                             class="mb-3 border rounded-3 col-5"
                                             :class="chat.status === 'sent' ? 'bz-sentMessage' : 'bz-receivedMessage'">
 
-                                            <!-- REMOVE MESSAGE TEMPORANEAMENTE AL CLICK -->
-                                            <div class="mt-3 mx-3"
-                                                @click="removeMessage(index)">
+                                            <!-- DROPDOWN -->
+                                            <div class="dropdown-center">
+
+                                                <a
+                                                    class="position-absolute top-0 end-0 me-2 text-secondary"
+                                                    data-bs-toggle="dropdown">
+                                                    <i
+                                                        class="fa-solid fa-chevron-down"></i>
+                                                </a>
+
+                                                <ul class="dropdown-menu">
+
+                                                    <!-- AL CLICK INCOCA IL METODO removeMessage() -->
+                                                    <li
+                                                        @click="removeMessage(index)">
+                                                        <a
+                                                            class="dropdown-item"
+                                                            href="#">Rimuovi
+                                                            Messaggio</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="dropdown-item"
+                                                            href="#">Informazioni</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+
+                                            <div class="mb-3 mx-3">
                                                 {{chat.message}}
                                             </div>
 
