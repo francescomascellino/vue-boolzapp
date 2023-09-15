@@ -301,7 +301,7 @@ createApp({
 
         },
 
-        checkSentMsg() {
+        checkSentMsg(index) {
 
             let activeMsgs = this.contacts[this.activeContact].messages;
 
@@ -325,7 +325,7 @@ createApp({
                 }
             })
 
-        }
+        },
 
     }
 

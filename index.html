@@ -183,7 +183,8 @@
                                             <div
                                                 class="bz-timeonline bz-fontSmaller">
 
-                                                <span>12.00</span>
+                                                <span
+                                                    v-bind="checkSentMsg(index)">{{lastOnline}}</span>
 
                                             </div>
 
@@ -228,7 +229,7 @@
                                             <div>
 
                                                 <span class="bz-fontSmaller"
-                                                    v-bind="checkSentMsg()">Ultimo
+                                                    v-bind="checkSentMsg(activeContact)">Ultimo
                                                     accesso alle:
                                                     {{lastOnline}} </span>
 
