@@ -185,9 +185,12 @@ createApp({
 
             ],
 
+            //NON UTILIZZATE, RESTANO COME REFERENCE PER RIPASSO
+            /*
             sentDate: [],
-
-            lastOnline: "",
+            
+            lastOnline: "", 
+            */
 
         }
     },
@@ -301,6 +304,8 @@ createApp({
 
         },
 
+        //NON UTILIZZATO, RESTA COME REFERENCE PER RIPASSO
+
         checkSentMsg(index) {
 
             let activeMsgs = this.contacts[index].messages;
@@ -308,6 +313,7 @@ createApp({
             activeMsgs.filter((message) => {
                 if (message.status == "sent") {
                     this.sentDate.push(message.date);
+
 
                     //slice(-1) CORRISPONDE ALL'ULTIMO ELEMENTO. SLICE RITORNA L'ELEMENTO IN UNA NUOVA STRINGA CHE ASSEGNAMO A lastOnline
                     this.lastOnline = this.sentDate.slice(-1).toString();

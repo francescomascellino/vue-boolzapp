@@ -171,9 +171,9 @@
                                                 <div
                                                     class="bz-lastMessage bz-fontSmaller">
 
-                                                    <span>Ultimo
-                                                        accesso messaggio
-                                                        inviato</span>
+                                                    <span>Ultimo messaggio:
+                                                        {{contact.messages[contact.messages.length
+                                                        -1].message}}</span>
 
                                                 </div>
 
@@ -183,8 +183,8 @@
                                             <div
                                                 class="bz-timeonline bz-fontSmaller">
 
-                                                <span
-                                                    v-bind="checkSentMsg(index)">{{lastOnline}}</span>
+                                                <span>{{contact.messages[contact.messages.length
+                                                    -1].date}}</span>
 
                                             </div>
 
@@ -228,10 +228,10 @@
 
                                             <div>
 
-                                                <span class="bz-fontSmaller"
-                                                    v-bind="checkSentMsg(activeContact)">Ultimo
-                                                    accesso alle:
-                                                    {{lastOnline}} </span>
+                                                <span class="bz-fontSmaller">Ultimo
+                                                    accesso:
+                                                    {{contacts[activeContact].messages[contacts[activeContact].messages.length
+                                                    -1].date}}</span>
 
                                             </div>
 
