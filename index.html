@@ -121,7 +121,7 @@
                                     </span>
 
                                     <!-- QUANDO UN TASTO VIENE RILASCIATO VIENE INVOCATA LA FUNZIONE searchContact() -->
-                                    <input type="text"
+                                    <input type="text" id="vz-searchBar"
                                         class="form-control border-start-0 shadow-none bz-btnSearchBar bz-fontSmall bz-bgAppWhite"
                                         placeholder="Cerca o inizia una nuova chat"
                                         v-model="searchInput"
@@ -341,7 +341,7 @@
                                     <i class="fa-regular fa-face-smile"></i>
                                 </span>
 
-                                <input type="text"
+                                <input type="text" id="vz-messageInput"
                                     class="flex-grow-1 bz-messageInput bz-bgAppWhite"
                                     placeholder="Scrivi un messaggio"
                                     v-model="inputMessage"
