@@ -202,12 +202,9 @@ createApp({
             if (this.inputMessage != "") {
 
                 const todayDate = new Date();
-                console.log(todayDate);
 
                 //TRASCRIVE LA DATA IN FORMATO EU
                 let EuroDate = todayDate.getDate() + '/' + (todayDate.getMonth() + 1) + '/' + todayDate.getFullYear() + " " + todayDate.getHours() + ":" + todayDate.getMinutes() + ":" + todayDate.getSeconds();
-
-                console.log(EuroDate);
 
                 let newMessage = {
                     date: EuroDate,
@@ -220,7 +217,7 @@ createApp({
                 //SVUOTO LA NEW TASK, SVUOTANDO L'IMPUT
                 this.inputMessage = "";
 
-                // CREO UN MESSAGGIO AUTOMATICO DA INVIARE
+                // CREO UN MESSAGGIO AUTOMATICO DA INVIARE DOPO UN SECONDO
                 autoMessage = setTimeout(() => {
 
                     let newSentMsg = {
@@ -252,6 +249,8 @@ createApp({
 
                 if (this.contacts[i].name.toLowerCase().includes(searchValue)) {
                     console.log(this.contacts[i].name);
+                    this.contacts[i].name.toLowerCase().includes(searchValue).visible.status() = false;
+                    console.log(this.contacts[i].name.toLowerCase().includes(searchValue).visible);
                 }
 
             }
