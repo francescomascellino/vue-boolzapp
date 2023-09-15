@@ -14,6 +14,10 @@ createApp({
 
             activeContact: 0,
 
+            inputMessage: "",
+
+            searchInput: "",
+
             contacts: [
                 {
                     name: 'Michele',
@@ -191,6 +195,55 @@ createApp({
         getName(activeContact) {
             return this.contacts[activeContact].name
         },
+
+        sendMessage(activeContact) {
+
+            //AL CLICK DEL BOTTONE CONTROLLO SE L'IMPUT NON E' UNA STRINGA VUOTA
+            if (this.inputMessage != "") {
+
+                const todayDate = new Date();
+                console.log(todayDate);
+
+                //TRASCRIVE LA DATA IN FORMATO EU
+                let EuroDate = todayDate.getDate() + '/' + (todayDate.getMonth() + 1) + '/' + todayDate.getFullYear() + " " + todayDate.getHours() + ":" + todayDate.getMinutes() + ":" + todayDate.getSeconds();
+
+                console.log(EuroDate);
+
+                let newMessage = {
+                    date: EuroDate,
+                    message: this.inputMessage,
+                    status: 'sent',
+                };
+
+                this.contacts[activeContact].messages.push(newMessage);
+
+                //SVUOTO LA NEW TASK, SVUOTANDO L'IMPUT
+                this.inputMessage = "";
+                ;
+            }
+
+        },
+
+        removeMessage(index) {
+
+            //RIMUOVE 1 ELEMENTO NELL'ARRAY MESSAGE ALLA POS. index)
+            this.contacts[this.activeContact].messages.splice(index, 1);
+
+        },
+
+        searchContact(searchInput) {
+
+            for (let i = 0; i < this.contacts.length; i++) {
+
+                const searchValue = searchInput.toLowerCase();
+
+                if (this.contacts[i].name.toLowerCase().includes(searchValue)) {
+                    console.log(this.contacts[i].name);
+                }
+
+            }
+
+        }
 
     }
 
