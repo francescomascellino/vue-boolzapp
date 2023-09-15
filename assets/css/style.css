@@ -18,24 +18,24 @@ body {
     background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(219, 219, 210, 1) 15%);
 }
 
-.vz-mainContainer {
+.bz-mainContainer {
     /* max-height: 90vh; */
     padding: 0;
 }
 
-.vz-profileContainer {
+.bz-profileContainer {
     font-size: 0.8rem;
 }
 
-.vz-bgAppLight {
+.bz-bgAppLight {
     background-color: var(--bz-app-light);
 }
 
-.vz-bgAppWhite {
+.bz-bgAppWhite {
     background-color: var(--bz-app-white);
 }
 
-.vz-appFocus {
+.bz-appFocus {
     background-color: var(--bz-app-focus);
 }
 
@@ -49,7 +49,7 @@ body {
     color: var(--bz-app-principal) !important;
 }
 
-.vz-avatarPic {
+.bz-avatarPic {
     width: 3rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -59,7 +59,7 @@ body {
 
 /* #region DESKTOP NOTIFICATION ALERT */
 
-.vz-bell {
+.bz-bell {
     color: var(--bz-app-focus);
     background-color: var(--bz-app-white);
     width: 2.5rem;
@@ -71,11 +71,11 @@ body {
     font-size: medium;
 }
 
-.vz-notMess {
+.bz-notMess {
     font-size: 0.8rem;
 }
 
-.vz-actDeskNot {
+.bz-actDeskNot {
     color: grey;
     font-size: 0.7rem;
 }
@@ -84,17 +84,17 @@ body {
 
 /* #region SEARCHBAR */
 
-.vz-sidebar {
+.bz-sidebar {
     /* border: 1px solid orange; */
 }
 
-.vz-btnSearch {
+.bz-btnSearch {
     border: 1px solid lightgray;
     color: var(--bz-app-principal) !important;
     cursor: pointer;
 }
 
-.vz-btnSearchBar {
+.bz-btnSearchBar {
     border: 1px solid lightgray !important;
     font-size: 0.8rem;
 }
@@ -103,28 +103,28 @@ body {
 
 /* #region CONTACTS PANEL */
 
-.vz-contactsListCont {
+.bz-contactsListCont {
     height: calc(90vh - 175px);
     overflow-y: scroll;
     background-color: var(--bz-app-white);
 }
 
-.vz-contactTab {
+.bz-contactTab {
     cursor: pointer;
 }
 
-.vz-contactName {
+.bz-contactName {
     font-size: 1rem;
     line-height: 1rem;
 }
 
-.vz-timeonline,
-.vz-lastMessage {
+.bz-timeonline,
+.bz-lastMessage {
     font-size: 0.7rem;
     color: var(--bz-app-principal);
 }
 
-.vz-contactActive {
+.bz-contactActive {
     background-color: var(--bz-app-light);
 }
 
@@ -132,40 +132,40 @@ body {
 
 /* #region ACTIVE CONTACT NAVBAR */
 
-.vz-ActContactNavbar {
+.bz-ActContactNavbar {
     border-left: 1px solid lightgray;
 }
 
-.vz-lastOnline {
+.bz-lastOnline {
     font-size: 0.7rem;
 }
 
 /* #endregion ACTIVE CONTACT NAVBAR */
 
 /* #region CHAT */
-.vz-chatContainer {
+.bz-chatContainer {
     background-image: url("../../img/mine.jpg");
 }
 
-.vz-chat {
+.bz-chat {
     height: calc(90vh - 126px);
     overflow-y: scroll;
 }
 
-.vz-messages {}
+.bz-messages {}
 
-.vz-sentMessage {
+.bz-sentMessage {
     background-color: var(--bz-app-chat-received);
     margin-left: auto !important;
 
 }
 
-.vz-receivedMessage {
+.bz-receivedMessage {
     background-color: var(--bz-app-white);
     margin-right: auto !important;
 }
 
-.vz-chatDate {
+.bz-chatDate {
     font-size: 0.6rem;
     color: var(--bz-app-principal);
 
@@ -175,7 +175,7 @@ body {
 
 /* #region SEND MESSAGE BAR */
 
-input.vz-messageInput {
+input.bz-messageInput {
     border: none;
     border-radius: 5px;
     padding: 0.5rem

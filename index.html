@@ -30,24 +30,24 @@
 
                 <div class="row justify-content-center">
 
-                    <div class="col vz-mainContainer my-5 d-flex">
+                    <div class="col bz-mainContainer my-5 d-flex">
 
                         <div class="col-4">
 
                             <!-- SIDEBAR -->
-                            <div class="vz-sidebar">
+                            <div class="bz-sidebar">
                                 <!-- USER NAVBAR -->
-                                <nav class="navbar navbar-expand vz-bgAppLight">
+                                <nav class="navbar navbar-expand bz-bgAppLight">
 
                                     <div class="container-fluid">
 
                                         <!-- USER AVATAR -->
                                         <div
-                                            class="vz-profileContainer d-flex align-items-center">
+                                            class="bz-profileContainer d-flex align-items-center">
 
                                             <a class="navbar-brand" href="#">
 
-                                                <img class="vz-avatarPic"
+                                                <img class="bz-avatarPic"
                                                     src="./img/avatar_io.jpg"
                                                     alt="User">
 
@@ -90,20 +90,20 @@
 
                                 <!-- ACTIVATE DESKTOP NOTIFICATION ALERT -->
                                 <div
-                                    class="d-flex align-items-center p-2 vz-notificationAlert vz-appFocus">
+                                    class="d-flex align-items-center p-2 bz-notificationAlert bz-appFocus">
 
-                                    <div class="me-2 vz-bell">
+                                    <div class="me-2 bz-bell">
                                         <i class="fa fa-bell-slash"
                                             aria-hidden="true"></i>
                                     </div>
 
-                                    <div class="vz-notMess d-flex flex-column">
+                                    <div class="bz-notMess d-flex flex-column">
 
                                         <span
                                             class="d-lg-inline-block d-sm-none">Ricevi
                                             notifiche di nuovi messaggi</span>
 
-                                        <a class="vz-actDeskNot" href>Attiva
+                                        <a class="bz-actDeskNot" href>Attiva
                                             notifiche desktop</a>
 
                                     </div>
@@ -116,14 +116,14 @@
                                     <!-- role="search" -->
 
                                     <span
-                                        class="input-group-text vz-btnSearch vz-bgAppWhite"
+                                        class="input-group-text bz-btnSearch bz-bgAppWhite"
                                         @click="searchContact(searchInput)">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </span>
                                     <!-- id="searchbar" -->
 
                                     <input type="text"
-                                        class="form-control border-start-0 shadow-none vz-btnSearchBar vz-bgAppWhite"
+                                        class="form-control border-start-0 shadow-none bz-btnSearchBar bz-bgAppWhite"
                                         placeholder="Cerca o inizia una nuova chat"
                                         v-model="searchInput">
                                     <!-- type="search"
@@ -133,25 +133,25 @@
                                 </div>
 
                                 <!-- CONTACTS LIST -->
-                                <div class="vz-contactsListCont">
+                                <div class="bz-contactsListCont">
 
                                     <!-- CONTACT TAB -->
                                     <div
-                                        class="p-2 vz-contactTab"
+                                        class="p-2 bz-contactTab"
                                         v-for="(contact, index) in contacts"
                                         key="index"
-                                        :class="index == activeContact ? 'vz-contactActive' : ''"
+                                        :class="index == activeContact ? 'bz-contactActive' : ''"
                                         @click="activeContact = index"
                                         v-show="contact.visible">
                                         <!-- 🔼 PERCHE' V IF NON FUNZIONA? -->
 
                                         <div
-                                            class="vz-profileContainer d-flex">
+                                            class="bz-profileContainer d-flex">
 
                                             <!-- AVATAR -->
                                             <div class="me-2">
 
-                                                <img class="vz-avatarPic"
+                                                <img class="bz-avatarPic"
                                                     :src="contact.avatar"
                                                     :alt="contact.name">
 
@@ -160,13 +160,13 @@
                                             <!-- NAME AND LAST MESSAGE -->
                                             <!-- d-lg-inline-block d-xs-none -->
                                             <div
-                                                class="d-flex flex-column flex-grow-1 align-items-start vz-status">
+                                                class="d-flex flex-column flex-grow-1 align-items-start bz-status">
 
-                                                <div class="mb-1 vz-contactName">
+                                                <div class="mb-1 bz-contactName">
                                                     <span>{{contact.name}}</span>
                                                 </div>
 
-                                                <div class="vz-lastMessage">
+                                                <div class="bz-lastMessage">
 
                                                     <!-- SICURAMENTE DIVERRA' DINAMICO -->
                                                     <span>Ultimo
@@ -177,7 +177,7 @@
                                             </div>
 
                                             <!-- TIME ONLINE -->
-                                            <div class="vz-timeonline">
+                                            <div class="bz-timeonline">
 
                                                 <span>12.00</span>
 
@@ -197,24 +197,24 @@
 
                             <!-- ACTIVE CONTACT NAVBAR -->
                             <nav
-                                class="navbar navbar-expand vz-ActContactNavbar vz-bgAppLight">
+                                class="navbar navbar-expand bz-ActContactNavbar bz-bgAppLight">
 
                                 <div class="container-fluid">
 
                                     <!-- CONTACT AVATAR -->
                                     <div
-                                        class="vz-profileContainer d-flex align-items-center">
+                                        class="bz-profileContainer d-flex align-items-center">
 
                                         <a class="navbar-brand" href="#">
 
-                                            <img class="vz-avatarPic"
+                                            <img class="bz-avatarPic"
                                                 :src="getAvatar(activeContact)"
                                                 :alt="getName(activeContact)">
 
                                         </a>
 
                                         <!-- d-lg-inline-block d-sm-none -->
-                                        <div class="vz-contactStatus">
+                                        <div class="bz-contactStatus">
 
                                             <div>
                                                 <span>{{contacts[activeContact].name}}</span>
@@ -223,7 +223,7 @@
                                             <div>
 
                                                 <!-- SICURAMENTE DIVERRA' DINAMICO -->
-                                                <span class="vz-lastOnline">Ultimo
+                                                <span class="bz-lastOnline">Ultimo
                                                     accesso
                                                     oggi alle 12.00</span>
 
@@ -263,19 +263,19 @@
                             </nav>
 
                             <!-- CHAT CONTAINER -->
-                            <div class="vz-chatContainer">
+                            <div class="bz-chatContainer">
 
-                                <div class="p-5 d-flex flex-column vz-chat">
+                                <div class="p-5 d-flex flex-column bz-chat">
 
                                     <!-- MESSAGE RENDER WRAPPER -->
-                                    <div class="vz-messages d-flex flex-column"
+                                    <div class="bz-messages d-flex flex-column"
                                         v-for="(chat, index) in contacts[activeContact].messages"
                                         :key="index">
 
                                         <!-- MESSAGE BUBBLE -->
                                         <div
                                             class="mb-3 border rounded-3 col-5"
-                                            :class="chat.status === 'sent' ? 'vz-sentMessage' : 'vz-receivedMessage'">
+                                            :class="chat.status === 'sent' ? 'bz-sentMessage' : 'bz-receivedMessage'">
 
                                             <!-- REMOVE MESSAGE TEMPORANEAMENTE AL CLICK -->
                                             <div class="mt-3 mx-3"
@@ -286,7 +286,7 @@
                                             <div class="d-flex">
 
                                                 <span
-                                                    class="ms-auto me-2 mb-1 vz-chatDate">
+                                                    class="ms-auto me-2 mb-1 bz-chatDate">
                                                     {{chat.date}}
                                                 </span>
 
@@ -301,7 +301,7 @@
 
                             <!-- SEND MESSAGE BAR -->
                             <div
-                                class="d-flex p-2 vz-bgAppLight">
+                                class="d-flex p-2 bz-bgAppLight">
 
                                 <span
                                     class="btn bg-transparent border-0">
@@ -309,7 +309,7 @@
                                 </span>
 
                                 <input type="text"
-                                    class="flex-grow-1 vz-messageInput vz-bgAppWhite"
+                                    class="flex-grow-1 bz-messageInput bz-bgAppWhite"
                                     placeholder="Scrivi un messaggio"
                                     v-model="inputMessage"
                                     v-on:keyup.enter="sendMessage(activeContact)">
