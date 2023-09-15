@@ -219,7 +219,20 @@ createApp({
 
                 //SVUOTO LA NEW TASK, SVUOTANDO L'IMPUT
                 this.inputMessage = "";
-                ;
+
+                // CREO UN MESSAGGIO AUTOMATICO DA INVIARE
+                autoMessage = setInterval(() => {
+
+                    let newSentMsg = {
+                        date: EuroDate,
+                        message: "ok",
+                        status: 'received',
+                    };
+
+                    this.contacts[activeContact].messages.push(newSentMsg);
+
+                }, 1000);
+
             }
 
         },
