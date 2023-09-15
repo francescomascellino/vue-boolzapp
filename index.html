@@ -43,7 +43,7 @@
 
                                         <!-- USER AVATAR -->
                                         <div
-                                            class="bz-profileContainer d-flex align-items-center">
+                                            class="bz-bz-fontSmall d-flex align-items-center">
 
                                             <a class="navbar-brand" href="#">
 
@@ -97,13 +97,14 @@
                                             aria-hidden="true"></i>
                                     </div>
 
-                                    <div class="bz-notMess d-flex flex-column">
+                                    <div class="bz-fontSmall d-flex flex-column">
 
-                                        <span
-                                            class="d-lg-inline-block d-sm-none">Ricevi
+                                        <!-- class="d-lg-inline-block d-sm-none" -->
+                                        <span>Ricevi
                                             notifiche di nuovi messaggi</span>
 
-                                        <a class="bz-actDeskNot" href>Attiva
+                                        <a class="bz-actDeskNot bz-fontSmaller"
+                                            href>Attiva
                                             notifiche desktop</a>
 
                                     </div>
@@ -123,7 +124,7 @@
                                     <!-- id="searchbar" -->
 
                                     <input type="text"
-                                        class="form-control border-start-0 shadow-none bz-btnSearchBar bz-bgAppWhite"
+                                        class="form-control border-start-0 shadow-none bz-btnSearchBar bz-fontSmall bz-bgAppWhite"
                                         placeholder="Cerca o inizia una nuova chat"
                                         v-model="searchInput">
                                     <!-- type="search"
@@ -146,7 +147,7 @@
                                         <!-- 🔼 PERCHE' V IF NON FUNZIONA? -->
 
                                         <div
-                                            class="bz-profileContainer d-flex">
+                                            class="bz-bz-fontSmall d-flex">
 
                                             <!-- AVATAR -->
                                             <div class="me-2">
@@ -166,7 +167,8 @@
                                                     <span>{{contact.name}}</span>
                                                 </div>
 
-                                                <div class="bz-lastMessage">
+                                                <div
+                                                    class="bz-lastMessage bz-fontSmaller">
 
                                                     <!-- SICURAMENTE DIVERRA' DINAMICO -->
                                                     <span>Ultimo
@@ -177,7 +179,8 @@
                                             </div>
 
                                             <!-- TIME ONLINE -->
-                                            <div class="bz-timeonline">
+                                            <div
+                                                class="bz-timeonline bz-fontSmaller">
 
                                                 <span>12.00</span>
 
@@ -203,7 +206,7 @@
 
                                     <!-- CONTACT AVATAR -->
                                     <div
-                                        class="bz-profileContainer d-flex align-items-center">
+                                        class="bz-bz-fontSmall d-flex align-items-center">
 
                                         <a class="navbar-brand" href="#">
 
@@ -223,7 +226,7 @@
                                             <div>
 
                                                 <!-- SICURAMENTE DIVERRA' DINAMICO -->
-                                                <span class="bz-lastOnline">Ultimo
+                                                <span class="bz-fontSmaller">Ultimo
                                                     accesso
                                                     oggi alle 12.00</span>
 

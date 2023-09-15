@@ -19,12 +19,15 @@ body {
 }
 
 .bz-mainContainer {
-    /* max-height: 90vh; */
     padding: 0;
 }
 
-.bz-profileContainer {
+.bz-fontSmall {
     font-size: 0.8rem;
+}
+
+.bz-fontSmaller {
+    font-size: 0.7rem;
 }
 
 .bz-bgAppLight {
@@ -71,22 +74,21 @@ body {
     font-size: medium;
 }
 
-.bz-notMess {
+/* .bz-notMess {
     font-size: 0.8rem;
-}
+} */
 
 .bz-actDeskNot {
     color: grey;
-    font-size: 0.7rem;
 }
 
 /* #endregion DESKTOP NOTIFICAYION ALERT */
 
 /* #region SEARCHBAR */
 
-.bz-sidebar {
-    /* border: 1px solid orange; */
-}
+/* .bz-sidebar {
+
+} */
 
 .bz-btnSearch {
     border: 1px solid lightgray;
@@ -96,7 +98,6 @@ body {
 
 .bz-btnSearchBar {
     border: 1px solid lightgray !important;
-    font-size: 0.8rem;
 }
 
 /* #endregion SEARCHBAR */
@@ -120,7 +121,6 @@ body {
 
 .bz-timeonline,
 .bz-lastMessage {
-    font-size: 0.7rem;
     color: var(--bz-app-principal);
 }
 
@@ -134,10 +134,6 @@ body {
 
 .bz-ActContactNavbar {
     border-left: 1px solid lightgray;
-}
-
-.bz-lastOnline {
-    font-size: 0.7rem;
 }
 
 /* #endregion ACTIVE CONTACT NAVBAR */
