@@ -114,22 +114,19 @@
                                 <!-- SEARCHBAR -->
                                 <div
                                     class="d-flex input-group bg-light p-2">
-                                    <!-- role="search" -->
 
                                     <span
                                         class="input-group-text bz-btnSearch bz-bgAppWhite"
-                                        @click="searchContact(searchInput)">
+                                        @click="searchContact()">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                     </span>
-                                    <!-- id="searchbar" -->
 
+                                    <!-- QUANDO UN TASTO VIENE RILASCIATO VIENE INVOCATA LA FUNZIONE searchContact() -->
                                     <input type="text"
                                         class="form-control border-start-0 shadow-none bz-btnSearchBar bz-fontSmall bz-bgAppWhite"
                                         placeholder="Cerca o inizia una nuova chat"
-                                        v-model="searchInput">
-                                    <!-- type="search"
-                                        aria-label="Search"
-                                        aria-describedby="searchbar" -->
+                                        v-model="searchInput"
+                                        @keyup="searchContact()">
 
                                 </div>
 

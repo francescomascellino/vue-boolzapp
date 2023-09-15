@@ -241,16 +241,24 @@ createApp({
 
         },
 
-        searchContact(searchInput) {
+        searchContact() {
 
             for (let i = 0; i < this.contacts.length; i++) {
 
-                const searchValue = searchInput.toLowerCase();
+                const searchValue = this.searchInput.toLowerCase();
 
-                if (this.contacts[i].name.toLowerCase().includes(searchValue)) {
-                    console.log(this.contacts[i].name);
-                    this.contacts[i].name.toLowerCase().includes(searchValue).visible.status() = false;
-                    console.log(this.contacts[i].name.toLowerCase().includes(searchValue).visible);
+                if (searchValue == "") {
+
+                    // SE SEARCHVALUE E' VUOTO TUTTI I CONTATTI DIVENTANO VISIBILI
+                    this.contacts[i].visible = true;
+
+                } else if (!this.contacts[i].name.toLowerCase().includes(searchValue)) {
+
+                    // IL NOME CHE NON CONTIENE LE LETTERE INSERITE VIENE RESO NON VISIBILE
+                    this.contacts[i].visible = false;
+
+                    //CONSOLE LOG DEI CONTATTI NASCOSTI
+                    console.log(this.contacts[i].name, this.contacts[i].visible);
                 }
 
             }
