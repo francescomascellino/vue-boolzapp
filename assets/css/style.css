@@ -20,6 +20,7 @@ body {
 
 .bz-mainContainer {
     padding: 0;
+    height: 90vh;
 }
 
 .bz-fontSmall {
@@ -38,7 +39,7 @@ body {
     background-color: var(--bz-app-white);
 }
 
-.bz-appFocus {
+.bz-bgAppFocus {
     background-color: var(--bz-app-focus);
 }
 
@@ -61,6 +62,9 @@ body {
 /* #endregion USER NAVBAR */
 
 /* #region DESKTOP NOTIFICATION ALERT */
+.bz-notificationAlert {
+    height: 60px;
+}
 
 .bz-bell {
     color: var(--bz-app-focus);
@@ -74,10 +78,6 @@ body {
     font-size: medium;
 }
 
-/* .bz-notMess {
-    font-size: 0.8rem;
-} */
-
 .bz-actDeskNot {
     color: grey;
 }
@@ -86,9 +86,9 @@ body {
 
 /* #region SEARCHBAR */
 
-/* .bz-sidebar {
-
-} */
+.bz-sidebar {
+    height: 100%;
+}
 
 .bz-btnSearch {
     border: 1px solid lightgray;
@@ -105,7 +105,7 @@ body {
 /* #region CONTACTS PANEL */
 
 .bz-contactsListCont {
-    height: calc(90vh - 175px);
+    height: calc(100% - 183.19px);
     overflow-y: scroll;
     background-color: var(--bz-app-white);
 }
@@ -139,16 +139,23 @@ body {
 /* #endregion ACTIVE CONTACT NAVBAR */
 
 /* #region CHAT */
+
+/* .bz-left,
+.bz-right {
+} */
+
 .bz-chatContainer {
     background-image: url("../../img/mine.jpg");
+    height: calc(100% - 130px);
 }
 
 .bz-chat {
-    height: calc(90vh - 126px);
+    height: 100%;
     overflow-y: scroll;
 }
 
-.bz-messages {}
+/* .bz-messages {
+} */
 
 .bz-sentMessage {
     background-color: var(--bz-app-chat-received);

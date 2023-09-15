@@ -32,7 +32,7 @@
 
                     <div class="col bz-mainContainer my-5 d-flex">
 
-                        <div class="col-4">
+                        <div class="col-4 bz-left">
 
                             <!-- SIDEBAR -->
                             <div class="bz-sidebar">
@@ -90,7 +90,7 @@
 
                                 <!-- ACTIVATE DESKTOP NOTIFICATION ALERT -->
                                 <div
-                                    class="d-flex align-items-center p-2 bz-notificationAlert bz-appFocus">
+                                    class="d-flex align-items-center p-2 bz-notificationAlert bz-bgAppFocus">
 
                                     <div class="me-2 bz-bell">
                                         <i class="fa fa-bell-slash"
@@ -196,7 +196,7 @@
                         </div>
 
                         <!-- MAIN SECTION -->
-                        <div class="col flex-grow-1">
+                        <div class="col flex-grow-1 bz-right">
 
                             <!-- ACTIVE CONTACT NAVBAR -->
                             <nav
@@ -271,7 +271,7 @@
                                 <div class="p-5 d-flex flex-column bz-chat">
 
                                     <!-- MESSAGE RENDER WRAPPER -->
-                                    <div class="bz-messages d-flex flex-column"
+                                    <div class="bz-messages"
                                         v-for="(chat, index) in contacts[activeContact].messages"
                                         :key="index">
 
