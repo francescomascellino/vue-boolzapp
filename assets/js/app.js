@@ -303,7 +303,7 @@ createApp({
 
         checkSentMsg(index) {
 
-            let activeMsgs = this.contacts[this.activeContact].messages;
+            let activeMsgs = this.contacts[index].messages;
 
             activeMsgs.filter((message) => {
                 if (message.status == "sent") {
