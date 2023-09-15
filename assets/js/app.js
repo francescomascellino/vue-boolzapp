@@ -308,8 +308,20 @@ createApp({
             activeMsgs.filter((message) => {
                 if (message.status == "sent") {
                     this.sentDate.push(message.date);
+
+                    //slice(-1) CORRISPONDE ALL'ULTIMO ELEMENTO. SLICE RITORNA L'ELEMENTO IN UNA NUOVA STRINGA CHE ASSEGNAMO A lastOnline
                     this.lastOnline = this.sentDate.slice(-1).toString();
-                    // this.sentDate = this.sentDate.splice(this.sentDate.length - 1,1);
+
+                    //COME SOPRA MA USANDO SPLICE
+                    // this.lastOnline = this.sentDate.splice(this.sentDate.length -1, 1).toString();
+
+                    // PER AVERE SOLO LE ORE USO SPLIT PER DIVIDERE LA STRINGA IN UN ARRAY SEPARATO DAGLI SPAZI ( " " )
+                    this.lastOnline = this.lastOnline.split(" ");
+
+                    //COME PRIMA CONVERTO lastOnline IN STRINGA DOPO AVER RECUPERATO SOLO L'ULTIMO ELEMENTO, OVVERO L'ORA
+                    this.lastOnline = this.lastOnline.slice(-1).toString();
+
+
                 }
             })
 
