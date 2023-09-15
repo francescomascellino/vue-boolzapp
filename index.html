@@ -132,6 +132,11 @@
                                 <!-- CONTACTS LIST -->
                                 <div class="bz-contactsListCont">
 
+                                    <!-- VIENE RENDERIZZATO SOLO v-if allFalseCheck E' true -->
+                                    <h6 class="text-center my-2"
+                                        v-if="allFalseCheck">Nessun contatto da
+                                        visualizzare</h6>
+
                                     <!-- CONTACT TAB -->
                                     <div
                                         class="p-2 bz-contactTab"

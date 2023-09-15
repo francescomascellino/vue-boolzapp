@@ -18,6 +18,8 @@ createApp({
 
             searchInput: "",
 
+            allFalseCheck: false,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -263,6 +265,11 @@ createApp({
 
                 }
 
+                //EVERY EVESUE UNA FUNZIONE CHE DEVE RITORNARE UN VALORE BOOLEANO PER OGNI ELEMENTO DI UN ARRAY E RITORNA VERO O FALSO SE TUTTI SODDISFANO LA CONDIZIONE.
+                //PER OGNI contact IN contacts CONTROLLA SE contact.visible E' false
+                //SE TUTTI i contact.visible SONO false, allFalseCheck PRENDE IL VALORE DI true (E' VERO CHE TUTTI I contact.visible SONO FALSE)
+                //QUANDO allFalseCHeck E' true, IL MESSAGGIO VIENE RENDERIZZATO
+                this.allFalseCheck = this.contacts.every(contact => contact.visible == false);
 
             });
 
