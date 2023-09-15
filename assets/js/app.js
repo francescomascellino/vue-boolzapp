@@ -243,25 +243,50 @@ createApp({
 
         searchContact() {
 
-            for (let i = 0; i < this.contacts.length; i++) {
+            //PER OGNI "contact" DENTRO CONTACTS ESEGUE UNA FUNZIONE (IN QUESTO CASO UNA FUNZIONE ANONIMA CON PARAMETRO "contact")
+            this.contacts.forEach((contact) => {
 
+                //ASSEGNA A searchValue IL VALORE DI searchInput IN MINUSCOLO PER EVITARE ERRORI DI RICERCA
                 const searchValue = this.searchInput.toLowerCase();
 
+                // SE searchValue E' VUOTO
                 if (searchValue == "") {
 
-                    // SE SEARCHVALUE E' VUOTO TUTTI I CONTATTI DIVENTANO VISIBILI
-                    this.contacts[i].visible = true;
+                    // A OGNI CONTATTO CICLATO DAL foreach VIENE ASSEGNATO LO STATO true SU visible
+                    contact.visible = true;
 
-                } else if (!this.contacts[i].name.toLowerCase().includes(searchValue)) {
+                    //ALTRIMENTI SE IL contact.name NON CONTIENE searchValue
+                } else if (!contact.name.toLowerCase().includes(searchValue)) {
 
-                    // IL NOME CHE NON CONTIENE LE LETTERE INSERITE VIENE RESO NON VISIBILE
-                    this.contacts[i].visible = false;
+                    // LO STATO DI visible CAMBIA IN false
+                    contact.visible = false;
 
-                    //CONSOLE LOG DEI CONTATTI NASCOSTI
-                    console.log(this.contacts[i].name, this.contacts[i].visible);
                 }
 
-            }
+
+            });
+
+            //CON CLASSICO CICLO FOR
+            /* 
+                        for (let i = 0; i < this.contacts.length; i++) {
+            
+                            const searchValue = this.searchInput.toLowerCase();
+            
+                            if (searchValue == "") {
+            
+                                // SE SEARCHVALUE E' VUOTO TUTTI I CONTATTI DIVENTANO VISIBILI
+                                this.contacts[i].visible = true;
+            
+                            } else if (!this.contacts[i].name.toLowerCase().includes(searchValue)) {
+            
+                                // IL NOME CHE NON CONTIENE LE LETTERE INSERITE VIENE RESO NON VISIBILE
+                                this.contacts[i].visible = false;
+            
+                                //CONSOLE LOG DEI CONTATTI NASCOSTI
+                                console.log(this.contacts[i].name, this.contacts[i].visible);
+                            }
+            
+                        } */
 
         }
 
