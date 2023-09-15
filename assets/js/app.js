@@ -221,7 +221,7 @@ createApp({
                 this.inputMessage = "";
 
                 // CREO UN MESSAGGIO AUTOMATICO DA INVIARE
-                autoMessage = setInterval(() => {
+                autoMessage = setTimeout(() => {
 
                     let newSentMsg = {
                         date: EuroDate,
