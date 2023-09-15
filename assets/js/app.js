@@ -183,7 +183,11 @@ createApp({
                     ],
                 }
 
-            ]
+            ],
+
+            sentDate: [],
+
+            lastOnline: "",
 
         }
     },
@@ -191,11 +195,11 @@ createApp({
     methods: {
 
         getAvatar(activeContact) {
-            return this.contacts[activeContact].avatar
+            return this.contacts[activeContact].avatar;
         },
 
         getName(activeContact) {
-            return this.contacts[activeContact].name
+            return this.contacts[activeContact].name;
         },
 
         sendMessage(activeContact) {
@@ -294,6 +298,20 @@ createApp({
                             }
             
                         } */
+
+        },
+
+        checkSentMsg() {
+
+            let activeMsgs = this.contacts[this.activeContact].messages;
+
+            activeMsgs.filter((message) => {
+                if (message.status == "sent") {
+                    this.sentDate.push(message.date);
+                    this.lastOnline = this.sentDate.slice(-1).toString();
+                    // this.sentDate = this.sentDate.splice(this.sentDate.length - 1,1);
+                }
+            })
 
         }
 

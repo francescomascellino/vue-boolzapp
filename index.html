@@ -221,15 +221,17 @@
                                         <div class="bz-contactStatus">
 
                                             <div>
-                                                <span>{{contacts[activeContact].name}}</span>
+                                                <span>{{contacts[activeContact].name}}
+                                                </span>
                                             </div>
 
                                             <div>
 
                                                 <!-- SICURAMENTE DIVERRA' DINAMICO -->
-                                                <span class="bz-fontSmaller">Ultimo
-                                                    accesso
-                                                    oggi alle 12.00</span>
+                                                <span class="bz-fontSmaller"
+                                                    v-bind="checkSentMsg()">Ultimo
+                                                    accesso:
+                                                    {{lastOnline}} </span>
 
                                             </div>
 
