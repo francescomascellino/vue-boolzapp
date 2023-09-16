@@ -139,10 +139,6 @@ body {
 
 /* #region CHAT */
 
-/* .bz-left,
-.bz-right {
-} */
-
 .bz-chatContainer {
     background-image: url("../../img/mine.jpg");
     height: calc(100% - 130px);
@@ -152,9 +148,6 @@ body {
     height: 100%;
     overflow-y: scroll;
 }
-
-/* .bz-messages {
-} */
 
 .bz-sentMessage {
     background-color: var(--bz-app-chat-received);
@@ -170,7 +163,11 @@ body {
 .bz-chatDate {
     font-size: 0.6rem;
     color: var(--bz-app-principal);
+}
 
+.vz-chatMessage {
+    word-wrap: break-word;
+    width: 80%;
 }
 
 /* #enderegion CHAT */
