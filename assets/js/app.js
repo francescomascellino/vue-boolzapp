@@ -185,7 +185,7 @@ createApp({
 
             ],
 
-            //NON UTILIZZATE, RESTANO COME REFERENCE PER RIPASSO
+            //NON UTILIZZATE, RESTANO COME REFERENCE PER RIPASSO METODI ARRAY
             /*
             sentDate: [],
             
@@ -305,7 +305,6 @@ createApp({
         },
 
         //NON UTILIZZATO, RESTA COME REFERENCE PER RIPASSO
-
         checkSentMsg(index) {
 
             let activeMsgs = this.contacts[index].messages;
