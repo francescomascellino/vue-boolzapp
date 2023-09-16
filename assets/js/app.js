@@ -205,7 +205,7 @@ createApp({
             return this.contacts[activeContact].name;
         },
 
-        sendMessage(activeContact) {
+        sendMessage() {
 
             //AL CLICK DEL BOTTONE CONTROLLO SE L'IMPUT NON E' UNA STRINGA VUOTA
             if (this.inputMessage != "") {
@@ -221,7 +221,7 @@ createApp({
                     status: 'sent',
                 };
 
-                this.contacts[activeContact].messages.push(newMessage);
+                this.contacts[this.activeContact].messages.push(newMessage);
 
                 //SVUOTO LA NEW TASK, SVUOTANDO L'IMPUT
                 this.inputMessage = "";
@@ -235,7 +235,7 @@ createApp({
                         status: 'received',
                     };
 
-                    this.contacts[activeContact].messages.push(newSentMsg);
+                    this.contacts[this.activeContact].messages.push(newSentMsg);
 
                 }, 1000);
 

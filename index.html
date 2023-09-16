@@ -160,7 +160,6 @@
                                             </div>
 
                                             <!-- NAME AND LAST MESSAGE -->
-                                            <!-- d-lg-inline-block d-xs-none -->
                                             <div
                                                 class="d-flex flex-column flex-grow-1 align-items-start bz-status">
 
@@ -171,7 +170,8 @@
                                                 <div
                                                     class="bz-lastMessage bz-fontSmaller">
 
-                                                    <span>Ultimo
+                                                    <span
+                                                        v-if="contact.messages.length > 0">Ultimo
                                                         messaggio:{{contact.messages[contact.messages.length
                                                         -1].message.length < 8 ?
                                                         " " +
@@ -183,6 +183,9 @@
                                                         + "..."}}
                                                     </span>
 
+                                                    <span
+                                                        v-else>Nessun messaggio</span>
+
                                                 </div>
 
                                             </div>
@@ -191,8 +194,13 @@
                                             <div
                                                 class="bz-timeonline bz-fontSmaller">
 
-                                                <span>{{contact.messages[contact.messages.length
-                                                    -1].date.substr(-8)}}</span>
+                                                <span
+                                                    v-if="contact.messages.length
+                                                > 0">{{contact.messages[contact.messages.length
+                                                    -1].date.substr(-8)}}
+                                                </span>
+
+                                                <span v-else>. . .</span>
 
                                             </div>
 
@@ -226,7 +234,6 @@
 
                                         </a>
 
-                                        <!-- d-lg-inline-block d-sm-none -->
                                         <div class="bz-contactStatus">
 
                                             <div>
@@ -236,10 +243,16 @@
 
                                             <div>
 
-                                                <span class="bz-fontSmaller">Ultimo
-                                                    accesso:
+                                                <span class="bz-fontSmaller"
+                                                    v-if="contacts[activeContact].messages.length
+                                                > 0">
+                                                    Ultimo accesso:
                                                     {{contacts[activeContact].messages[contacts[activeContact].messages.length
-                                                    -1].date}}</span>
+                                                    -1].date}}
+                                                </span>
+
+                                                <span class="bz-fontSmaller"
+                                                    v-else>Nessun messaggio</span>
 
                                             </div>
 
@@ -353,7 +366,7 @@
                                     class="flex-grow-1 bz-messageInput bz-bgAppWhite"
                                     placeholder="Scrivi un messaggio"
                                     v-model="inputMessage"
-                                    v-on:keyup.enter="sendMessage(activeContact)">
+                                    v-on:keyup.enter="sendMessage()">
 
                                 <button
                                     class="btn bg-transparent border-0"
