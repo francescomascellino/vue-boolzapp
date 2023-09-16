@@ -270,7 +270,9 @@ createApp({
                     // LO STATO DI visible CAMBIA IN false
                     contact.visible = false;
 
-                }
+                } else {
+                    contact.visible = true;
+                };
 
                 //EVERY EVESUE UNA FUNZIONE CHE DEVE RITORNARE UN VALORE BOOLEANO PER OGNI ELEMENTO DI UN ARRAY E RITORNA VERO O FALSO SE TUTTI SODDISFANO LA CONDIZIONE.
                 //PER OGNI contact IN contacts CONTROLLA SE contact.visible E' false
