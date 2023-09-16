@@ -171,9 +171,17 @@
                                                 <div
                                                     class="bz-lastMessage bz-fontSmaller">
 
-                                                    <span>Ultimo messaggio:
-                                                        {{contact.messages[contact.messages.length
-                                                        -1].message}}</span>
+                                                    <span>Ultimo
+                                                        messaggio:{{contact.messages[contact.messages.length
+                                                        -1].message.length < 8 ?
+                                                        " " +
+                                                        contact.messages[contact.messages.length
+                                                        -1].message :
+                                                        " "
+                                                        +contact.messages[contact.messages.length
+                                                        -1].message.substr(0,10)
+                                                        + "..."}}
+                                                    </span>
 
                                                 </div>
 
@@ -184,7 +192,7 @@
                                                 class="bz-timeonline bz-fontSmaller">
 
                                                 <span>{{contact.messages[contact.messages.length
-                                                    -1].date}}</span>
+                                                    -1].date.substr(-8)}}</span>
 
                                             </div>
 
@@ -301,7 +309,7 @@
                                                         <a
                                                             class="dropdown-item"
                                                             href="#">Rimuovi
-                                                            Messaggio</a>
+                                                            Messaggio {{index}}</a>
                                                     </li>
 
                                                     <li>
