@@ -215,10 +215,11 @@ createApp({
             return this.contacts[activeContact].name;
         },
 
-        async sendMessage() {
+        generateRandomMsg() {
 
             //AL CLICK DEL BOTTONE CONTROLLO SE L'IMPUT NON E' UNA STRINGA VUOTA
             //.trim() RIMUOVE GLI SPAZI BIANCHI A INIZIO E FINE STRINGA. SE LA LUNGHEZZA DELLA STRINGA RIMOSSI GLI SPAZI E' UGUALE A ZERO VUOL DIRE CHE L'UTENTE AVEVA INSERITO SOLO SPAZI. SE E' MAGGIORE DI 0 VI E' DEL TESTO E IL MESSAGGIO VIENE PROCESSATO.
+
             if (this.inputMessage != "" && this.inputMessage.trim().length > 0) {
 
                 const todayDate = new Date();
@@ -258,15 +259,6 @@ createApp({
 
                 }, 1000);
 
-                //ATTENDE CHE I CAMBIAMENTI NELLA DOM ABBIANO LUOGO
-                await this.$nextTick()
-
-                // ASSEGNA A chat L'$el CON ID #bz-chatScroll
-                let chat = this.$el.querySelector("#bz-chatScroll");
-                //SCROLLA VERTICALMENTE DELLA SUA STESSA ALTEZZA 
-                // scrollHeight property returns the height of an element including padding, but excluding borders, scrollbars, or margins.)
-                chat.scrollTop = chat.scrollHeight;
-
                 // DOPO ALTRI 2 SECONDI IL TESTO TORNA LA DATA DELL'ULTIMO MESSAGGIO
                 setLastOnline = setTimeout(() => {
 
@@ -275,6 +267,24 @@ createApp({
                 }, 3000);
 
             }
+        },
+
+        async sendMessage() {
+
+            //ATTENDE CHE I CAMBIAMENTI NELLA DOM ABBIANO LUOGO
+            /*                 await this.$nextTick(() => {
+                                this.generateRandomMsg();
+                            }); */
+
+            this.generateRandomMsg();
+            await this.$nextTick();
+
+
+            // ASSEGNA A chat L'$el CON ID #bz-chatScroll
+            let chat = this.$el.querySelector("#bz-chatScroll");
+            //SCROLLA VERTICALMENTE DELLA SUA STESSA ALTEZZA 
+            // scrollHeight property returns the height of an element including padding, but excluding borders, scrollbars, or margins.)
+            chat.scrollTop = chat.scrollHeight
 
         },
 
