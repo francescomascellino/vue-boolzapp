@@ -208,7 +208,8 @@ createApp({
         sendMessage() {
 
             //AL CLICK DEL BOTTONE CONTROLLO SE L'IMPUT NON E' UNA STRINGA VUOTA
-            if (this.inputMessage != "") {
+            //.trim() RIMUOVE GLI SPAZI BIANCHI A INIZIO E FINE STRINGA. SE LA LUNGHEZZA DELLA STRINGA RIMOSSI GLI SPAZI E' UGUALE A ZERO VUOL DIRE CHE L'UTENTE AVEVA INSERITO SOLO SPAZI. SE E' MAGGIORE DI 0 VI E' DEL TESTO E IL MESSAGGIO VIENE PROCESSATO.
+            if (this.inputMessage != "" && this.inputMessage.trim().length > 0) {
 
                 const todayDate = new Date();
 
