@@ -185,7 +185,9 @@ createApp({
 
             ],
 
-            rngAnswers: ["Certamente", "Fantastico!", "Ok!", "Non capisco cosa tu voglia dire..."]
+            rngAnswers: ["Certamente", "Fantastico!", "Ok!", "Non capisco cosa tu voglia dire...", "Smettila, per favore..."],
+
+            actContactStatus: "",
 
             //NON UTILIZZATE, RESTANO COME REFERENCE PER RIPASSO METODI ARRAY
             /*
@@ -195,6 +197,12 @@ createApp({
             */
 
         }
+    },
+
+    created() {
+
+        // DOPO LA CREAZIONE ASSEGNA LA DATA E L'ORA DELL'ULTIMO MESSAGGIO AD actContactStatus
+        this.actContactStatus = "Ultimo accesso alle " + this.contacts[this.activeContact].messages[this.contacts[this.activeContact].messages.length - 1].date.substr(-8);
     },
 
     methods: {
@@ -207,7 +215,7 @@ createApp({
             return this.contacts[activeContact].name;
         },
 
-        sendMessage() {
+        async sendMessage() {
 
             //AL CLICK DEL BOTTONE CONTROLLO SE L'IMPUT NON E' UNA STRINGA VUOTA
             //.trim() RIMUOVE GLI SPAZI BIANCHI A INIZIO E FINE STRINGA. SE LA LUNGHEZZA DELLA STRINGA RIMOSSI GLI SPAZI E' UGUALE A ZERO VUOL DIRE CHE L'UTENTE AVEVA INSERITO SOLO SPAZI. SE E' MAGGIORE DI 0 VI E' DEL TESTO E IL MESSAGGIO VIENE PROCESSATO.
@@ -229,6 +237,9 @@ createApp({
                 //SVUOTO LA NEW TASK, SVUOTANDO L'IMPUT
                 this.inputMessage = "";
 
+                // CAMBIA IL TESTO DI actContactStatus PER LA DURATA DI autoMessage
+                this.actContactStatus = "Sta scrivendo..."
+
                 // CREO UN MESSAGGIO AUTOMATICO DA INVIARE DOPO UN SECONDO
                 autoMessage = setTimeout(() => {
 
@@ -242,7 +253,17 @@ createApp({
                         status: 'received',
                     });
 
+                    // CAMBIA IL TESTO DI actContactStatus
+                    this.actContactStatus = "Online"
+
                 }, 1000);
+
+                // DOPO ALTRI 2 SECONDI IL TESTO TORNA LA DATA DELL'ULTIMO MESSAGGIO
+                setLastOnline = setTimeout(() => {
+
+                    this.actContactStatus = "Ultimo alle " + this.contacts[this.activeContact].messages[this.contacts[this.activeContact].messages.length - 1].date.substr(-8);
+
+                }, 3000);
 
             }
 
@@ -311,7 +332,7 @@ createApp({
 
         },
 
-        //NON UTILIZZATO, RESTA COME REFERENCE PER RIPASSO
+        //NON UTILIZZATO, RESTA COME REFERENCE PER RIPASSO. RECUPERA ORA ULTIMO MESS INVIATO DAL CONTATTO
         checkSentMsg(index) {
 
             let activeMsgs = this.contacts[index].messages;
@@ -333,7 +354,6 @@ createApp({
                     //COME PRIMA CONVERTO lastOnline IN STRINGA DOPO AVER RECUPERATO SOLO L'ULTIMO ELEMENTO, OVVERO L'ORA
                     this.lastOnline = this.lastOnline.slice(-1).toString();
 
-
                 }
             })
 
@@ -353,7 +373,7 @@ createApp({
 
 ✔  predisporre una lista di frasi e/o citazioni da utilizzare al posto della risposta "ok:" quando il pc risponde, anziché scrivere "ok", scegliere una frase random dalla lista e utilizzarla come testo del messaggio di risposta del pc
 
-sotto al nome del contatto nella parte in alto a destra, cambiare l'indicazione dello stato: visualizzare il testo "sta scrivendo..." nel timeout in cui il pc risponde, poi mantenere la scritta "online" per un paio di secondi e infine visualizzare "ultimo accesso alle xx:yy" con l'orario corretto (<-✔)
+✔  sotto al nome del contatto nella parte in alto a destra, cambiare l'indicazione dello stato: visualizzare il testo "sta scrivendo..." nel timeout in cui il pc risponde, poi mantenere la scritta "online" per un paio di secondi e infine visualizzare "ultimo accesso alle xx:yy" con l'orario corretto (<-✔)
 
 dare la possibilità all'utente di cancellare tutti i messaggi di un contatto o di cancellare l'intera chat con tutti i suoi dati: cliccando sull'icona con i tre pallini in alto a destra, si apre un dropdown menu in cui sono presenti le voci "Elimina messaggi" ed "Elimina chat"; cliccando su di essi si cancellano rispettivamente tutti i messaggi di quel contatto (quindi rimane la conversazione vuota) oppure l'intera chat comprensiva di tutti i dati del contatto oltre che tutti i suoi messaggi (quindi sparisce il contatto anche dalla lista di sinistra)
 
