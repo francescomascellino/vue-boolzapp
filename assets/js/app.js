@@ -258,6 +258,15 @@ createApp({
 
                 }, 1000);
 
+                //ATTENDE CHE I CAMBIAMENTI NELLA DOM ABBIANO LUOGO
+                await this.$nextTick()
+
+                // ASSEGNA A chat L'$el CON ID #bz-chatScroll
+                let chat = this.$el.querySelector("#bz-chatScroll");
+                //SCROLLA VERTICALMENTE DELLA SUA STESSA ALTEZZA 
+                // scrollHeight property returns the height of an element including padding, but excluding borders, scrollbars, or margins.)
+                chat.scrollTop = chat.scrollHeight;
+
                 // DOPO ALTRI 2 SECONDI IL TESTO TORNA LA DATA DELL'ULTIMO MESSAGGIO
                 setLastOnline = setTimeout(() => {
 
