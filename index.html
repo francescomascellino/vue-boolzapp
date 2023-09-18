@@ -376,8 +376,15 @@
 
                                 <button
                                     class="btn bg-transparent border-0"
+                                    v-if="inputMessage.length > 0"
                                     @click="sendMessage(activeContact)">
                                     <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+
+                                <button
+                                    class="btn bg-transparent border-0"
+                                    v-else>
+                                    <i class="fa-solid fa-microphone"></i>
                                 </button>
 
                             </div>
