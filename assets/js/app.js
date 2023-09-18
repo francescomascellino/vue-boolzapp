@@ -185,6 +185,8 @@ createApp({
 
             ],
 
+            rngAnswers: ["Certamente", "Fantastico!", "Ok!", "Non capisco cosa tu voglia dire..."]
+
             //NON UTILIZZATE, RESTANO COME REFERENCE PER RIPASSO METODI ARRAY
             /*
             sentDate: [],
@@ -230,13 +232,15 @@ createApp({
                 // CREO UN MESSAGGIO AUTOMATICO DA INVIARE DOPO UN SECONDO
                 autoMessage = setTimeout(() => {
 
-                    let newSentMsg = {
-                        date: EuroDate,
-                        message: "ok",
-                        status: 'received',
-                    };
+                    // PESCO UNA RIPOSTA CASUALE DALL'ARRAY rngAnswers
+                    const answer = this.rngAnswers[Math.floor((Math.random() * this.rngAnswers.length))];
 
-                    this.contacts[this.activeContact].messages.push(newSentMsg);
+                    // PUSHO L'OGGETTO DENTRO CONTACTS. (HO PREFERITO LASCIARE IL METODO LUNGO PRIMA COME REFERENCE)
+                    this.contacts[this.activeContact].messages.push({
+                        date: EuroDate,
+                        message: answer,
+                        status: 'received',
+                    });
 
                 }, 1000);
 
@@ -347,7 +351,8 @@ createApp({
 ✔ Quando il messaggio è stato inviato e l'input si svuota, si torna a visualizzare il microfono. 
 ✔  B) inviare quindi il messaggio anche cliccando sull'icona dell'aeroplano
 
-predisporre una lista di frasi e/o citazioni da utilizzare al posto della risposta "ok:" quando il pc risponde, anziché scrivere "ok", scegliere una frase random dalla lista e utilizzarla come testo del messaggio di risposta del pc
+✔  predisporre una lista di frasi e/o citazioni da utilizzare al posto della risposta "ok:" quando il pc risponde, anziché scrivere "ok", scegliere una frase random dalla lista e utilizzarla come testo del messaggio di risposta del pc
+
 sotto al nome del contatto nella parte in alto a destra, cambiare l'indicazione dello stato: visualizzare il testo "sta scrivendo..." nel timeout in cui il pc risponde, poi mantenere la scritta "online" per un paio di secondi e infine visualizzare "ultimo accesso alle xx:yy" con l'orario corretto (<-✔)
 
 dare la possibilità all'utente di cancellare tutti i messaggi di un contatto o di cancellare l'intera chat con tutti i suoi dati: cliccando sull'icona con i tre pallini in alto a destra, si apre un dropdown menu in cui sono presenti le voci "Elimina messaggi" ed "Elimina chat"; cliccando su di essi si cancellano rispettivamente tutti i messaggi di quel contatto (quindi rimane la conversazione vuota) oppure l'intera chat comprensiva di tutti i dati del contatto oltre che tutti i suoi messaggi (quindi sparisce il contatto anche dalla lista di sinistra)
