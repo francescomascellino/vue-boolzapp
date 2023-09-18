@@ -28,9 +28,9 @@
 
             <div class="container">
 
-                <div class="row justify-content-center">
+                <div class="row">
 
-                    <div class="col bz-mainContainer my-5 d-flex">
+                    <div class="bz-mainContainer my-5 d-flex">
 
                         <div class="col-4 bz-left">
 
@@ -54,7 +54,7 @@
                                             </a>
 
                                             <span
-                                                class="d-lg-inline-block d-sm-none">User</span>
+                                                class="d-sm-none d-md-inline">User</span>
 
                                         </div>
 
@@ -102,7 +102,8 @@
                                         <span>Ricevi
                                             notifiche di nuovi messaggi</span>
 
-                                        <a class="bz-actDeskNot bz-fontSmaller"
+                                        <a
+                                            class="d-sm-none d-md-inline bz-actDeskNot bz-fontSmaller"
                                             href>Attiva
                                             notifiche desktop</a>
 
@@ -184,6 +185,7 @@
                                                     </span>
 
                                                     <span
+                                                        class="d-sm-none d-md-inline"
                                                         v-else>Nessun messaggio</span>
 
                                                 </div>
@@ -195,6 +197,7 @@
                                                 class="bz-timeonline bz-fontSmaller">
 
                                                 <span
+                                                    class="d-sm-none d-md-inline"
                                                     v-if="contact.messages.length
                                                 > 0">{{contact.messages[contact.messages.length
                                                     -1].date.substr(-8)}}
@@ -301,7 +304,7 @@
 
                                         <!-- MESSAGE BUBBLE -->
                                         <div
-                                            class="mb-3 border rounded-3 col-5"
+                                            class="mb-3 border rounded-3 col-sm-10 col-md-5"
                                             :class="chat.status === 'sent' ? 'bz-sentMessage' : 'bz-receivedMessage'">
 
                                             <!-- DROPDOWN -->

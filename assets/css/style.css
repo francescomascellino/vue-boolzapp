@@ -16,6 +16,8 @@
 
 body {
     background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(219, 219, 210, 1) 15%);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .bz-mainContainer {
