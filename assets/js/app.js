@@ -262,7 +262,7 @@ createApp({
                 // DOPO ALTRI 2 SECONDI IL TESTO TORNA LA DATA DELL'ULTIMO MESSAGGIO
                 setLastOnline = setTimeout(() => {
 
-                    this.actContactStatus = "Ultimo alle " + this.contacts[this.activeContact].messages[this.contacts[this.activeContact].messages.length - 1].date.substr(-8);
+                    this.actContactStatus = "Ultimo accesso alle " + this.contacts[this.activeContact].messages[this.contacts[this.activeContact].messages.length - 1].date.substr(-8);
 
                 }, 3000);
 
@@ -272,12 +272,12 @@ createApp({
         async sendMessage() {
 
             //ATTENDE CHE I CAMBIAMENTI NELLA DOM ABBIANO LUOGO
-            /*                 await this.$nextTick(() => {
-                                this.generateRandomMsg();
-                            }); */
+            await this.$nextTick(() => {
+                this.generateRandomMsg();
+            });
 
-            this.generateRandomMsg();
-            await this.$nextTick();
+            /*             this.generateRandomMsg();
+                        await this.$nextTick(); */
 
 
             // ASSEGNA A chat L'$el CON ID #bz-chatScroll
